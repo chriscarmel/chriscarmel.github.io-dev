@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<nav class="navigation">
+  <ul class="
+    list
+    navigation__list">
+    <li *ngFor="let navigationSection of navigationSectionArray"
+      class="list__item">
+      <a [routerLink]="navigationSection.url">{{ navigationSection.heading }}</a>
+    </li>
+  </ul>
+</nav>

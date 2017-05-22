@@ -1,0 +1,11 @@
+.projects {
+    border: 1px solid #FAA;
+}
+
+.projects__header {
+    border: 1px solid #F00;
+}
+
+.projects__footer {
+    border: 1px solid #F55;
+}
