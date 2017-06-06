@@ -5,25 +5,29 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { ApiService } from './api.service';
+
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LanguagesComponent } from './languages/languages.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { HomeComponent } from './home/home.component';
+import { PostComponent } from './home/post/post.component';
+
 import { ProjectsComponent } from './projects/projects.component';
-import { FrameworksComponent } from './frameworks/frameworks.component';
-import { AboutComponent } from './about/about.component';
-import { ConceptsComponent } from './concepts/concepts.component';
+import { ProjectComponent } from './projects/project/project.component';
+
+import { LanguagesComponent } from './languages/languages.component';
+import { LanguageComponent } from './languages/language/language.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     HomeComponent,
+    PostComponent,
     ProjectsComponent,
+    ProjectComponent,
     LanguagesComponent,
-    FrameworksComponent,
-    AboutComponent,
-    ConceptsComponent
+    LanguageComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,11 @@ import { ConceptsComponent } from './concepts/concepts.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    ApiService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

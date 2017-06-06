@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<article class="language">
+  <header class="language__header">
+    <h1 class="language__name">
+      {{ language.name }}
+    </h1>
+  </header>
+
+  <section class="language__projects">
+    <ul class="
+      list
+      language__project-list">
+      <li
+        *ngFor="let project of language.projectArray"
+        class="list__item">
+        {{ project.name }}
+      </li>
+    </ul>
+  </section>
+</article>

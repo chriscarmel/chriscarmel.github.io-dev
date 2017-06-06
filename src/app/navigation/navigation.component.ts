@@ -15,16 +15,13 @@ class NavigationSection {
 
 const NAVIGATION_SECTION_ARRAY: Array<NavigationSection> = [
   new NavigationSection('Projects', '/projects'),
-  new NavigationSection('Languages', '/languages'),
-  new NavigationSection('Frameworks', '/frameworks'),
-  new NavigationSection('Concepts', '/concepts'),
-  new NavigationSection('About', '/about')
+  new NavigationSection('Languages', '/languages')
 ];
 
 @Component({
   selector: 'cc-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
 

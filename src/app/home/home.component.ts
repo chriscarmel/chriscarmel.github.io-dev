@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ApiService } from '../api.service';
+
+import { Post } from '../app.model';
+
 @Component({
   selector: 'cc-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public postArray: Array<Post>;
 
-  ngOnInit() {
+  public constructor(
+    private apiService: ApiService
+  ) {
+    this.postArray = this.apiService.getPostArray();
   }
 
+  public ngOnInit(): void { }
 }
