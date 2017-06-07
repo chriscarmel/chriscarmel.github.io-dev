@@ -2,25 +2,25 @@
 <article class="post">
   <header class="post__header">
     <h1 class="post__title">
-      {{ post.title }}:
+      {{ post?.title }}:
     </h1>
 
     <h2>
       <a
-        [href]="post.project.address"
+        [href]="post?.project?.address"
         class="post__project-link">
-        {{ post.project.name }}
+        {{ post?.project?.name }}
       </a>
     </h2>
 
     <p class="post__date-created">
-      {{ post.dateCreated }}
+      {{ post?.dateCreated }}
     </p>
   </header>
 
   <section class="post__body">
     <p class="post__paragaph">
-      {{ post.body }}
+      {{ post?.body }}
     </p>
   </section>
 </article>

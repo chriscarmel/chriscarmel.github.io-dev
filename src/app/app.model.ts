@@ -1,12 +1,22 @@
+import { Language } from './app.constant';
+
 export class Project {
   public name: string;
   public address: string;
+  public languageArray: Array<Language>;
   public description: string;
-}
 
-export class Language {
-  public name: string;
-  public projectArray: Array<Project>;
+  public constructor(
+    name: string,
+    address: string,
+    languageArray: Array<Language>,
+    description: string
+  ) {
+    this.name = name;
+    this.address = address;
+    this.languageArray = languageArray;
+    this.description = description;
+  }
 }
 
 export class Post {
@@ -15,4 +25,16 @@ export class Post {
 
   public project: Project;
   public body: string;
+
+  public constructor(
+    title: string,
+    dateCreated: Date,
+    project: Project,
+    body: string
+  ) {
+    this.title = title;
+    this.dateCreated = dateCreated;
+    this.project = project;
+    this.body = body;
+  }
 }

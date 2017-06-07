@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Language, Project } from '../../app.model';
+import { Language } from '../../app.constant';
+import { Project } from '../../app.model';
 
 @Component({
   selector: 'cc-language',
@@ -10,10 +11,10 @@ import { Language, Project } from '../../app.model';
 export class LanguageComponent implements OnInit {
 
   @Input()
-  public language: Language;
+  public language: string;
 
   public constructor() {
-    this.language = new Language();
+    this.language = '';
   }
 
   public ngOnInit(): void { }

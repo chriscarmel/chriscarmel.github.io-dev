@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
 import { Post } from '../app.model';
+import { POST_COMPARE_FUNCTION } from '../app.constant';
 
 @Component({
   selector: 'cc-home',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
     private apiService: ApiService
   ) {
     this.postArray = this.apiService.getPostArray();
+    this.postArray = this.postArray.sort(POST_COMPARE_FUNCTION);
   }
 
   public ngOnInit(): void { }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ApiService } from '../api.service';
 
-import { Language } from '../app.model';
+import { Language } from '../app.constant';
 
 @Component({
   selector: 'cc-languages',
@@ -11,12 +11,12 @@ import { Language } from '../app.model';
 })
 export class LanguagesComponent implements OnInit {
 
-  public languageArray: Array<Language>;
+  public languageNameArray: Array<string>;
 
   public constructor(
     private apiService: ApiService
   ) {
-    this.languageArray = this.apiService.getLanguageArray();
+    this.languageNameArray = this.apiService.getLanguageNameArray();
   }
 
   public ngOnInit(): void {

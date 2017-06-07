@@ -12,12 +12,10 @@ export class PostComponent implements OnInit {
   @Input()
   public post: Post;
 
-  public constructor() {
-    this.post = new Post();
-  }
+  public constructor() {}
 
   public ngOnInit(): void {
-    console.log('this.post', this.post);
+    // console.log('this.post', this.post);
   }
 
 }
